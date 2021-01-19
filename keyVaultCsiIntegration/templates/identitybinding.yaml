@@ -1,0 +1,16 @@
+apiVersion: aadpodidentity.k8s.io/v1
+kind: AzureIdentity
+metadata:
+    name: {{ .Values.identitybinding.name }}             # The name of your Azure identity
+spec:
+    type: 0                                 # Set type: 0 for managed service identity
+    resourceID: {{ .Values.identitybinding.resourceId }} 
+    clientID: {{ .Values.identitybinding.clientId }}     # The clientId of the Azure AD identity that you created earlier
+---
+apiVersion: aadpodidentity.k8s.io/v1
+kind: AzureIdentityBinding
+metadata:
+    name: azure-pod-identity-binding
+spec:
+    azureIdentity: {{ .Values.identitybinding.azureIdentity }}      # The name of your Azure identity
+    selector: azure-pod-identity-binding-selector

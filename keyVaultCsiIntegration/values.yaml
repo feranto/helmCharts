@@ -4,15 +4,15 @@
 
 
 identitybinding:
-  name:
-  clientId:
-  resourceId:
-  azureIdentity:
+  clientid: sampleClientId
+  resourceid: sampleresourceId
+  azureidentity: sampleAzureIdentity
 
 secretprovider:
-  keyvaultname:
-  tenantid:
-  secretname:
+  name: azure-kv
+  keyvaultname: sampleKeyvaultName
+  tenantid: sampleTenantId
+  secretname: sampleSecretName
 
 replicaCount: 1
 

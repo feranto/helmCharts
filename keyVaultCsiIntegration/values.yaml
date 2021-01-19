@@ -9,6 +9,10 @@ identitybinding:
   resourceId:
   azureIdentity:
 
+secretprovider:
+  keyvaultname:
+  tenantid:
+  secretname:
 
 replicaCount: 1
 
